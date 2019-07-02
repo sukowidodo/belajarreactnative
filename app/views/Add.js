@@ -49,11 +49,10 @@ class Add extends React.Component {
               <Label>Content</Label>
               <Input onChangeText={(val)=>{this.setState({content:val})}}/>
             </Item>
+        
+            <Button rounded onPress={()=>{this.insert() }}><Text style={{color:'white',padding:10}}>simpan</Text></Button>
+       
           </Form>
-          <Button onPress={()=>{
-            console.log("dipencet"+this.state.title)
-              this.insert()
-          }}><Text>simpan</Text></Button>
         </Content>
       </Container>
       );

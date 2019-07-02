@@ -3,35 +3,30 @@ import {
     Platform, 
     StyleSheet, 
     Text, 
+    Image,
     View
 } from 'react-native';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
+
 
 class ItemArticle extends React.Component {
     render() {
       return (
-        <Card>
+        <Card style={{margin:50}}>
         <CardItem cardBody>
           <Image source={{uri: this.props.Image}} style={{height: 200, width: null, flex: 1}}/>
         </CardItem>
         <CardItem>
           <Text>{this.props.Title}</Text>
-          <Text>{this.props.Content}</Text>
         </CardItem>
         <CardItem>
-          <Left>
-            <Button transparent>
-              <Icon active name="thumbs-up" />
-              <Text>12 Likes</Text>
-            </Button>
-          </Left>
-          <Body>
-            <Button transparent>
-              <Icon active name="chatbubbles" />
-              <Text>4 Comments</Text>
-            </Button>
-          </Body>
+        <Text>{this.props.Content}</Text>
+        </CardItem>
+        <CardItem>
           <Right>
-            <Text>11h ago</Text>
+            <Button rounded style={{padding:20}}>
+              <Text style={{color:"white"}}>Read more</Text>
+            </Button>
           </Right>
         </CardItem>
       </Card>
