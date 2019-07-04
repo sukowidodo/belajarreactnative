@@ -11,8 +11,11 @@ import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Le
 
 class ItemArticle extends React.Component {
     render() {
+
+      console.log(this.props.image)
+
       return (
-        <Card style={{margin:50}}>
+        <Card style={{marginLeft:20, marginRight:20}}>
         <CardItem cardBody>
           <Image source={{uri: this.props.Image}} style={{height: 200, width: null, flex: 1}}/>
         </CardItem>
@@ -24,7 +27,7 @@ class ItemArticle extends React.Component {
         </CardItem>
         <CardItem>
           <Right>
-            <Button rounded style={{padding:20}}>
+            <Button rounded onPress={this.props.onPress}>
               <Text style={{color:"white"}}>Read more</Text>
             </Button>
           </Right>

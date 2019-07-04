@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,Button} from 'react-native';
+import {Platform, StyleSheet, Text, View,Button,FlatList} from 'react-native';
 import { Container,Header,Content } from 'native-base';
 import ItemArticle from '../components/ItemArticle';
-import { FlatList } from 'react-native-gesture-handler';
 import {getArticle} from '../services/Article'
 
 class Home extends Component {
@@ -38,12 +37,18 @@ class Home extends Component {
           <FlatList
             data={this.state.article}
             keyExtractor ={(item, index) => index.toString()}
-            renderItem = {({item}) =>(
+            renderItem = {({item}) => 
+            (
                 <ItemArticle
                   Title = {item.title}
                   Content = {item.content}
                   Image = {item.image}
                   Id = {item.id} 
+                  onPress = {() => this.props.navigation.navigate('Detail',{
+                    title:item.title,
+                    content:item.content,
+                    cover:item.image
+                  })}
                 />
             )}
           />
