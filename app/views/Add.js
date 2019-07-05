@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ImagePicker from 'react-native-image-picker';
+import {article_type} from '../actions/myaction';
+import { updateStateArticle } from '../actions/myaction'
+import { connect } from 'react-redux';
 import {
   Container,
   Header,
@@ -18,7 +21,7 @@ import {
   View
 } from 'react-native';
 
-import { insertArticle } from '../services/Article'
+import { insertArticle,getArticle } from '../services/Article'
 
 class Add extends React.Component {
 
@@ -27,15 +30,39 @@ class Add extends React.Component {
     content: '',
     image: '',
     uri:'',
+    articles:[]
   }
 
   insert() {
-    insertArticle({ title: this.state.title, content: this.state.content, uri:this.state.uri }).then((res) => {
+    let article = { 
+      title: this.state.title, 
+      content: this.state.content, 
+      uri: this.state.uri 
+    };
+
+    insertArticle(article).then((res) => {
       alert("Berhasil")
+    }).then(()=>{
+      getArticle().then((result)=>{
+        console.log(result.data);
+        this.setState( 
+          { articles : result.data }
+        )
+        console.log(this.state.articles);
+        this.props.updateArticle(this.state.articles);
+        this.props.navigation.push('Home')
+    })
+    
+    
     }).catch((err) => {
       console.log(err);
     })
   }
+
+  // updateArticle(){
+  //   console.log("componentDidMount")
+    
+  // }
 
   getImage(){
     ImagePicker.showImagePicker(
@@ -58,11 +85,11 @@ class Add extends React.Component {
       <Container>
         <Content>
           <Form>
-            <Item inlineLabel>
+            <Item floatingLabel>
               <Label>Judul</Label>
               <Input onChangeText={(val) => { this.setState({ title: val }) }} />
             </Item>
-            <Item inlineLabel>
+            <Item floatingLabel>
               <Label>Content</Label>
               <Input onChangeText={(val) => { this.setState({ content: val }) }} />
             </Item>
@@ -79,8 +106,22 @@ class Add extends React.Component {
   }
 }
 
-export default Add
-
 const styles = StyleSheet.create({
   Textkene: { color: 'white', padding: 10 },
 })
+
+const mapStateToProps = state => {
+  console.log("mapStateToProps = ")
+  console.log(state)
+  return {
+    articles : state.articles
+  }
+}
+
+const mapDispatchToProps = dispatch => { 
+  return {
+    updateArticle : (articles) => dispatch(updateStateArticle(articles))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Add)
