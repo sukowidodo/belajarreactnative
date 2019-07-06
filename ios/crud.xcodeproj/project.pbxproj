@@ -42,6 +42,7 @@
 		CD447F9052024E36B6F40E70 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A560A7F9A2C04009AE02AEE4 /* libRNGestureHandler.a */; };
 		2BCFD36B064742F188DFD043 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BCD0DA68C44D52A367F068 /* libRNGestureHandler-tvOS.a */; };
 		4C15C11ADFE04720AB446B3E /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E2E6FE5CE94D5D9B90D966 /* libRNImagePicker.a */; };
+		B357DEB2A68B4FCC85B36F69 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 190793DE52564398B0C2B98A /* libRNFirebase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,6 +355,8 @@
 		40BCD0DA68C44D52A367F068 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		330E2FC50A0B4C678D6D7D5C /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNImagePicker.xcodeproj"; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		42E2E6FE5CE94D5D9B90D966 /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		97E4F645D80C4275A53DF9D2 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; name = "RNFirebase.xcodeproj"; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		190793DE52564398B0C2B98A /* libRNFirebase.a */ = {isa = PBXFileReference; name = "libRNFirebase.a"; path = "libRNFirebase.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +387,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				CD447F9052024E36B6F40E70 /* libRNGestureHandler.a in Frameworks */,
 				4C15C11ADFE04720AB446B3E /* libRNImagePicker.a in Frameworks */,
+				B357DEB2A68B4FCC85B36F69 /* libRNFirebase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +580,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				52AEA15C491847D3924701AB /* RNGestureHandler.xcodeproj */,
 				330E2FC50A0B4C678D6D7D5C /* RNImagePicker.xcodeproj */,
+				97E4F645D80C4275A53DF9D2 /* RNFirebase.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1206,11 +1211,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1235,11 +1242,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1264,6 +1273,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1287,6 +1297,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1319,11 +1330,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1356,11 +1369,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Release;
@@ -1392,11 +1407,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Debug;
@@ -1428,11 +1445,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
+					"$(SRCROOT)\..\node_modules\react-native-firebase\ios\RNFirebase/**",
 				);
 			};
 			name = Release;

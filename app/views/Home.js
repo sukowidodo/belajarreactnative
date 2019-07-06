@@ -26,6 +26,14 @@ class Home extends Component {
   }
 
   componentDidMount(){
+    // firebase.messaging().hasPermission()
+    //   .then(enabled => {
+    //     if (enabled) {
+    //      console.log("has permission")
+    //     } else {
+    //       console.log("has not permission")
+    //     } 
+    //   });
     console.log("componentDidMount")
     getArticle().then((res)=>{
         this.setState({article:res.data})

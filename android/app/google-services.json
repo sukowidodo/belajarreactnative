@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "665306583511",
+    "firebase_url": "https://myreactnative-b95ac.firebaseio.com",
+    "project_id": "myreactnative-b95ac",
+    "storage_bucket": "myreactnative-b95ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665306583511:android:3988e9a6e3e7c3ba",
+        "android_client_info": {
+          "package_name": "com.crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665306583511-4r9jkgh7jvf6tqs4tbfudic08v9jfe24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crud",
+            "certificate_hash": "4f07f8929adfb107b72677ada5dd2ccb87878e8a"
+          }
+        },
+        {
+          "client_id": "665306583511-r5jo2l39ivm6jfa57g245ohibr4ij3gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChP-jZ1WL296PZ1sZr7q_LXMPYx0dKKrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "665306583511-r5jo2l39ivm6jfa57g245ohibr4ij3gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
