@@ -59,10 +59,10 @@ class Add extends React.Component {
     })
   }
 
-  // updateArticle(){
-  //   console.log("componentDidMount")
+  updateArticle(){
+    console.log("componentDidMount")
     
-  // }
+  }
 
   getImage(){
     ImagePicker.showImagePicker(
