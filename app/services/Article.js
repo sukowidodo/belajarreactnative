@@ -15,8 +15,8 @@ export const deleteArticle = (id) =>{
 export const insertArticle = (article) =>{
     const formData = new FormData();
     formData.append('image', {uri: article.uri, type: 'image/jpg', name: 'xxx'});
-    formData.append('title',article.title)
-    formData.append('content',article.content)
+    formData.append('title', article.title)
+    formData.append('content', article.content)
     return axios({
         url: URL,
         method: 'POST',

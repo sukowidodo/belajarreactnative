@@ -15,7 +15,7 @@ class ItemArticle extends React.Component {
       console.log(this.props.image)
 
       return (
-        <Card style={{marginLeft:20, marginRight:20}} borderRadius={10}>
+        <Card style = {{ marginLeft:20, marginRight:20 }} borderRadius={10}>
         <CardItem cardBody>
           <Image source={{uri: this.props.Image}} style={{height: 200, width: null, flex: 1}}/>
         </CardItem>
